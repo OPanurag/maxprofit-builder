@@ -1,13 +1,42 @@
 from solver.config import BUILDINGS
 
+"""
+The optimizer computes the maximum achievable profit and the optimal mix of
+Theatres (T), Pubs (P), and Commercial Parks (C) that can be constructed
+within a given number of time units. Only one property can be under construction
+at any time, and each property generates profit per unit time after it is
+completed, for the remainder of the available time horizon.
+
+Approach:
+- Use bottom-up dynamic programming, filling a dp table backwards from the end.
+- dp[t] = maximum profit achievable starting from time t until the end n,
+  along with the optimal building mix to achieve it.
+- At each time t, decisions are:
+    1. Skip building (carry forward dp[t+1]).
+    2. Start constructing one of the available properties if time allows.
+- Transition includes:
+    profit = (per-unit profit × operational_time_remaining) + dp[finish_time].
+
+This ensures sequential builds are respected and profits match the
+example outputs from the problem statement.
+"""
+
 def maximize_profit(n):
     """
-    Dynamic Programming approach:
-    At each time t, either:
-    - Start building any property here (if enough time remains)
-    - Or skip to t+1 (wait)
-    Each property earns 'profit' per unit time after it is completed,
-    only for the periods left in total time.
+    Solve the Max Profit problem for a given time horizon.
+
+    Args:
+        n (int): Total number of time units available.
+
+    Returns:
+        tuple:
+            - max_profit (int): Maximum achievable profit.
+            - solution (dict): Dictionary with counts of buildings:
+                {
+                    "T": number_of_theatres,
+                    "P": number_of_pubs,
+                    "C": number_of_commercial_parks
+                }
     """
     dp = [(0, {"T": 0, "P": 0, "C": 0}) for _ in range(n + 2)]
 
