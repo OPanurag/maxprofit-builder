@@ -4,6 +4,26 @@ A dynamic programming solution to maximize profit by deciding when to build Thea
 
 The algorithm calculates the optimal construction schedule that maximizes total profit, given each building's construction time and profit per operational time unit.
 
+## Directory Layout
+'''
+MaxProfit-Builder
+    ├── .gitignore
+    ├── LICENSE
+    ├── main.py
+    ├── README.md
+    ├── requirements.txt
+    ├── solver
+    │   ├── __init__.py
+    │   ├── __pycache__
+    │   ├── config.py
+    │   ├── optimizer.py
+    │   └── utils.py
+    ├── tests
+    │   ├── __init__.py
+    │   ├── __pycache__
+    │   └── test_optimizer.py
+    └── venv
+'''
 ## Features
 - **Dynamic Programming**: Computes optimal decisions from the end of the timeline backward.
 - **Configurable Buildings**: Change build times and profits in `solver/config.py`.
