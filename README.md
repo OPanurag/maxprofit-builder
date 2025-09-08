@@ -5,7 +5,7 @@ A dynamic programming solution to maximize profit by deciding when to build Thea
 The algorithm calculates the optimal construction schedule that maximizes total profit, given each building's construction time and profit per operational time unit.
 
 ## Directory Layout
-```bash
+```
 MaxProfit-Builder
     ├── .gitignore
     ├── LICENSE
