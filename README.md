@@ -6,7 +6,7 @@ The algorithm calculates the optimal construction schedule that maximizes total 
 
 ## Directory Layout
 ```
-MaxProfit-Builder
+MAXPROFIT_BUILDER
     ├── .gitignore
     ├── LICENSE
     ├── main.py
