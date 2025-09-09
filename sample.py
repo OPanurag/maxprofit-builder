@@ -1,6 +1,4 @@
 """
-Max Profit Builder Solution.
-
 Single-file solution for the Max Profit Builder problem.
 Online Compiler Compatible.
 
