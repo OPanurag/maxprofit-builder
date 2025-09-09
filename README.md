@@ -22,6 +22,7 @@ MAXPROFIT_BUILDER
     │   ├── __init__.py
     │   ├── __pycache__
     │   └── test_optimizer.py
+    |── sample.py
     └── venv
 ```
 
